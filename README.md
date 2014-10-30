@@ -6,7 +6,7 @@ From UC berkeley, UIUC, CMU, MIT, Argonne, etc.
 ###UC Berkeley###
 
 - [ ] CS 267: Applications of Parallel Computers [video](https://www.youtube.com/watch?v=pGFtiGW8QU0&list=PLYTiwx6hV33v8iWdAUNMmTaOX14O2CQfo) [homepage](http://www.cs.berkeley.edu/~carazvan/cs267.spr14/)
-- [ ] CS294: Modern Parallel Languages [video](http://www.cs.berkeley.edu/~yelick/cs294-f13/#staff)
+- [ ] CS294: Modern Parallel Languages [homepage](http://www.cs.berkeley.edu/~yelick/cs294-f13/#staff)
 - [ ] Parallel Training at Berkeley, 2013 [video](http://www.youtube.com/playlist?list=PLImGd8Yga0-mTfrAa8qgJhssfOtJLOSwj)
 - [ ] BerkeleyX: ASPIRE101x ASPIRE Short Course on Parallel Programming [homepage](https://edge.edx.org/courses/BerkeleyX/ASPIRE101x/2014_2015/about)
 
