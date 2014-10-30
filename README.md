@@ -3,9 +3,8 @@ Parallel-Computing-BootCamp
 
 From UC berkeley, UIUC, CMU, MIT, Argonne, etc.
 
-- [ ] CS267 [Applications of Parallel Computers](https://www.youtube.com/watch?v=pGFtiGW8QU0&list=PLYTiwx6hV33v8iWdAUNMmTaOX14O2CQfo)
-
-http://www.cs.berkeley.edu/~carazvan/cs267.spr14/
+- [ ] CS267 Applications of Parallel Computers [video](https://www.youtube.com/watch?v=pGFtiGW8QU0&list=PLYTiwx6hV33v8iWdAUNMmTaOX14O2CQfo)
+[homepage](http://www.cs.berkeley.edu/~carazvan/cs267.spr14/)
 
 COSC 594 Scientific Computing for Engineers
 http://web.eecs.utk.edu/~dongarra/WEB-PAGES/SPRING-2014/cs594-2014.htm
