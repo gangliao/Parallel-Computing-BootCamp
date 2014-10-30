@@ -15,7 +15,12 @@ From UC berkeley, UIUC, CMU, MIT, Argonne, etc.
 - [ ] CS 554/CSE 512: Parallel Numerical Algorithms [homepage](https://courses.engr.illinois.edu/cs554/fa2013/notes/index.html)
 - [ ] CS 525: Spring 2014 Advanced Distributed Systems [homepage](https://courses.engr.illinois.edu/cs525/sp2014/index.html)
 - [ ] CS 533: Parallel Computer Architectures Spring 2014 [homepage](https://courses.engr.illinois.edu/cs533/)
+- [ ] ~~Proven Algorithmic Techniques for Many-core Processors~~ [video](http://pat.hwu.crhc.illinois.edu/SitePages/Videos.aspx)
+- [ ] ~~ECE408/CS483 : Applied Parallel Programming~~ [homepage](https://ece408.hwu.crhc.illinois.edu/SitePages/Home.aspx)
+- [ ] ~~Heterogeneous Parallel Programming~~ [video](https://www.coursera.org/course/hetero)
 
+###NVIDIA and UC Davis###
+- [ ] ~~Intro to Parallel Programming - Using CUDA to Harness the Power of GPUs~~ [video](https://www.udacity.com/course/cs344)
 
 ###RICE###
 - [ ] COMP 422: Parallel Computing Spring 2014 [homepage](https://www.clear.rice.edu/comp422/lecture-notes/index.html)
