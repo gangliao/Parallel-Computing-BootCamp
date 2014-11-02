@@ -16,6 +16,7 @@ From UC berkeley, UIUC, CMU, MIT, Argonne, etc.
 - [ ] CS 525: Spring 2014 Advanced Distributed Systems [homepage](https://courses.engr.illinois.edu/cs525/sp2014/index.html)
 - [ ] CS 533: Parallel Computer Architectures Spring 2014 [homepage](https://courses.engr.illinois.edu/cs533/)
 - [ ] CS 598 LVK: Parallel Programming With Migratable Objects [homepage](https://wiki.cites.illinois.edu/wiki/display/cs598lvk/Lectures)
+- [ ] Parallel Programming Patterns [homepage](https://wiki.cites.illinois.edu/wiki/display/ppp/Home)
 - [X] ~~Proven Algorithmic Techniques for Many-core Processors~~ [video](http://pat.hwu.crhc.illinois.edu/SitePages/Videos.aspx)
 - [X] ~~ECE408/CS483: Applied Parallel Programming~~ [homepage](https://ece408.hwu.crhc.illinois.edu/SitePages/Home.aspx)
 - [X] ~~Heterogeneous Parallel Programming~~ [video](https://www.coursera.org/course/hetero)
