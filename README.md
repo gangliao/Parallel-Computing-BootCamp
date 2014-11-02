@@ -20,6 +20,7 @@ From UC berkeley, UIUC, CMU, MIT, Argonne, etc.
 - [ ] CS 498DD: Multicore Parallel Programming Fall 2012 [homepage](https://wiki.cites.illinois.edu/wiki/display/cs498dd/Schedule?src=contextnavchildmode)
 - [ ] CS 498: Program Optimization [homepage](https://wiki.cites.illinois.edu/wiki/display/cs498mgsp13/Schedule)
 - [ ] CS420/CSE402/ECE492: Introduction to Parallel Programming for Scientists and Engineers [homepage & video](https://wiki.cites.illinois.edu/wiki/display/cs420fa14/Tentative+Schedule)
+- [ ] CS 598lvk: Parallel Search [hamepage](https://wiki.cites.illinois.edu/wiki/display/cs598lvkfa10/Lectures)
 - [X] ~~Proven Algorithmic Techniques for Many-core Processors~~ [video](http://pat.hwu.crhc.illinois.edu/SitePages/Videos.aspx)
 - [X] ~~ECE408/CS483: Applied Parallel Programming~~ [homepage](https://ece408.hwu.crhc.illinois.edu/SitePages/Home.aspx)
 - [X] ~~Heterogeneous Parallel Programming~~ [video](https://www.coursera.org/course/hetero)
