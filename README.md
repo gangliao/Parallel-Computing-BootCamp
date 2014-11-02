@@ -15,8 +15,9 @@ From UC berkeley, UIUC, CMU, MIT, Argonne, etc.
 - [ ] CS 554/CSE 512: Parallel Numerical Algorithms [homepage](https://courses.engr.illinois.edu/cs554/fa2013/notes/index.html)
 - [ ] CS 525: Spring 2014 Advanced Distributed Systems [homepage](https://courses.engr.illinois.edu/cs525/sp2014/index.html)
 - [ ] CS 533: Parallel Computer Architectures Spring 2014 [homepage](https://courses.engr.illinois.edu/cs533/)
+- [ ] CS 598 LVK: Parallel Programming With Migratable Objects [homepage](https://wiki.cites.illinois.edu/wiki/display/cs598lvk/Lectures)
 - [X] ~~Proven Algorithmic Techniques for Many-core Processors~~ [video](http://pat.hwu.crhc.illinois.edu/SitePages/Videos.aspx)
-- [X] ~~ECE408/CS483 : Applied Parallel Programming~~ [homepage](https://ece408.hwu.crhc.illinois.edu/SitePages/Home.aspx)
+- [X] ~~ECE408/CS483: Applied Parallel Programming~~ [homepage](https://ece408.hwu.crhc.illinois.edu/SitePages/Home.aspx)
 - [X] ~~Heterogeneous Parallel Programming~~ [video](https://www.coursera.org/course/hetero)
 
 ###NVIDIA and UC Davis###
