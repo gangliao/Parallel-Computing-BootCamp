@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<title>/5776$9</title>
+</head>
+<body>basWelcome to:<br
+/>Linux/Unix Basics for HPC<br
+/>October 9, 2014<br
+/>9:00am - 12:00pm<br
+/>ROC 1.900<br
+/><br
+/>Please submit any questions in this window.&nbsp; Thank you.<br
+/><br
+/>You may need to mute your computer's mic if you are getting an audio loop or feedback.<br
+/><br
+/><br
+/><b>TO MAKE THINGS A LITTLE LESS CONFUSING, PLEASE SUBMIT QUESTIONS AT THE BOTTOM OF THE PAGE. THANKS!</b><br
+/><br
+/><br
+/><br
+/><br
+/>Sorry, is read 4, write 2, and execute 1 in the permissions chmod command?<br
+/><br
+/>yes.<br
+/>Thank you.<br
+/><br
+/><br
+/>What is the difference between cat textfile and more textfile?<br
+/>cat will show all content of the file even the file is large.<br
+/>more allows for "output" to be viewed one page at a time.<br
+/>cat allows for concatenation of files and other more complex manipulations of "output".<br
+/>Thank you.<br
+/><br
+/><br
+/>why some commands work with capitals and small letters, like PWD or pwd?<br
+/>PWD is an environment variable. You can do echo $PWD or cd $PWD. This means that PWD is a variable that has a value associated with.&nbsp;<br
+/>pwd is a command<br
+/>Thank you<br
+/>so does the command "pwd" dump the absolute path into variable $PWD each time you run it?<br
+/>Yes, it is automagically updated for you.<br
+/><br
+/>Sorry. Figured it out.<br
+/>How is "ls -d *" different from "ls"?<br
+/>Great, thanks.<br
+/>the "-d" is specifying directory only, but then you are asking for all the the asterisk, at least at first glance, they are equivalent. But, I'd just use "ls".<br
+/>To clarify, "all" in this case means all non-hidden files. If you really want to see every file; hidden and non-hidden, then you can use the "-a", i.e.: "ls -a".<br
+/><br
+/><br
+/><br
+/>So, !$ works the same way that up arrow?<br
+/>!$ is the "end" of the previous command. Consider the following example: We start by looking for a word in a file<br
+/>$ grep -i joe /some/long/directory/structure/user-lists/list-15<br
+/>if joe is in that userlist, we want to remove him from it. We can either fire up vi with that long directory tree as the argument, or as simply as<br
+/>$ vi !$<br
+/>Which bash expands to:<br
+/>$ vi /some/long/directory/structure/user-lists/list-15<br
+/><br
+/>It depends on what is your last command.<br
+/>e.g., "cat 1234". !$ gives you "1234".<br
+/><br
+/>$! Expands to the process ID of the most recently executed background (asynchronous) command. (different command -- whoops)<br
+/><br
+/><br
+/>How to end the addition of text to a file while using cat? Is Ctrl+C correct?<br
+/>cntrl + d<br
+/>does that help?<br
+/>OK, it worked<br
+/>Cool.<br
+/><br
+/><br
+/>Is it possible to show headers? for this output<br
+/>$ ls -a -s<br
+/>total 120<br
+/>&nbsp;0 .&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 .matplotlib<br
+/>&nbsp;0 ..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 .ssh<br
+/>&nbsp;8 .CFUserTextEncoding&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 CytoscapeConfiguration<br
+/>32 .DS_Store&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 Desktop<br
+/>&nbsp;8 .Rapp.history&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 Documents<br
+/>&nbsp;0 .Trash&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 Downloads<br
+/>&nbsp;0 .allegroviva&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 Google Drive<br
+/>48 .bash_history&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 Library<br
+/>&nbsp;8 .bash_profile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 Movies<br
+/>&nbsp;8 .bash_profile.macports-saved_2014-07-03_at_15:46:43&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 Music<br
+/>&nbsp;0 .config&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 Pictures<br
+/>&nbsp;0 .cups&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 Public<br
+/>&nbsp;0 .free42&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 VirtualBox VMs<br
+/>&nbsp;8 .lesshst&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 this-is-a-new+name<br
+/>&nbsp;0 .local<br
+/>&nbsp;What do you mean by headers?<br
+/>&nbsp;Try ls -lsh<br
+/>&nbsp;-l for long format<br
+/>&nbsp;-s for size at the beginning<br
+/>&nbsp;-h for human readable<br
+/><br
+/>How do you find the size of a file?<br
+/>Hint: "man"<br
+/>e.g. "man ls"<br
+/>Then type "/" followed by what you are wanting to find, maybe "/size"<br
+/>You can then cycle through instances of "size" by hitting "n" for next.<br
+/><br
+/><br
+/>My directories seem to have size 4? (instead of 0)<br
+/>Yep, me too. There is a finite size to store the directory file. I'm going to guess that Victor's size of 0 might be Mac related??<br
+/>size of 4 refers to block size. No matter your directory is empty, it gets 4 blocks allocated from the file system. Block size could be 1024 or 4096 depending on the system<br
+/>The 68 is the size in bytes.<br
+/><br
+/><br
+/>what do the 'pts/## mean?<br
+/>The pts/0 is telling you which "psuedo terminal" the user is logged in on. In this case it's terminal #0. The "(:0.0)" Tells you which hostname and display you're using.<br
+/><br
+/>Is there an option to put the date of users with "who" command<br
+/>what do you mean by date?<br
+/>Use "w" instead if you want to see "dates".<br
+/>for example if I want only to print&nbsp; users that logged in today or from yesterday?<br
+/><br
+/>You would need to filter your results from the system logs.<br
+/>Victor will be talking more about "filters", e.g. sed and awk later on in the talk.<br
+/>Thanks<br
+/><br
+/>Why are his files listed left justified down the page, and mine are listed across?<br
+/>(For 'ls -F')<br
+/>(His are vertical and mine are horizontal)<br
+/>You can list then vertical by doing this:<br
+/>ls -1F<br
+/>Sweet, thanks<br
+/>&nbsp;how do&nbsp;<br
+/><br
+/>shall we talk about how to submit a job to cliuster and how to work with various modules like CUDA etc?<br
+/>Submitting jobs depends on which cluster you are using. Stampede? Or somewhere else?&nbsp;<br
+/><br
+/>stampede<br
+/>How to know more about stampede cluster?<br
+/>We have all the information in our user guide: <a href="https://www.tacc.utexas.edu/user-services/user-guides/stampede-user-guide">https://www.tacc.utexas.edu/user-services/user-guides/stampede-user-guide</a><br
+/>you also can get info about cuda on stampede there.<br
+/>We'll not be covering that in this tutorial.<br
+/>If you want information regarding job submission: <a href="https://www.tacc.utexas.edu/user-services/user-guides/stampede-user-guide#running-slurm-jobcontrol">https://www.tacc.utexas.edu/user-services/user-guides/stampede-user-guide#running-slurm-jobcontrol</a><br
+/><br
+/>Do you have to be UT student to access Stampede?<br
+/><br
+/>Not required. You can apply allocation on stampede through xsede.<a href="https://kb.iu.edu/d/bazs">https://kb.iu.edu/d/bazs</a><br
+/>As a student you probably need to get your professor to grant you access<br
+/><br
+/><br
+/>4 read (r)<br
+/>2 write (w)<br
+/>1 execute (x)<br
+/><br
+/><b>Practical Examples</b><br
+/><br
+/>chmod 400 mydoc.txt read by owner<br
+/>chmod 040 mydoc.txt read by group<br
+/>chmod 004 mydoc.txt read by anybody (other)<br
+/>chmod 200 mydoc.txt write by owner<br
+/>chmod 020 mydoc.txt write by group<br
+/>chmod 002 mydoc.txt write by anybody<br
+/>chmod 100 mydoc.txt execute by owner<br
+/>chmod 010 mydoc.txt execute by group<br
+/>chmod 001 mydoc.txt execute by anybody<br
+/><br
+/>One can also use a different syntax:<br
+/>chmod u+rw file<br
+/>that would give read and write permission to a file. Or<br
+/>chmod g+X file<br
+/>that would give execution permission to a group (if the file was executable in the first place when using capital X)<br
+/>Or a combination:<br
+/>chmod go+rx file<br
+/>which will give the group and anybody else read and execute permissions<br
+/>I find this easier to remember<br
+/><br
+/>you also can use "-" to remove the permission. Yep, thanks for adding that!<br
+/>you can use "a" to represent everybody, user, group and others.<br
+/><br
+/>would you please explain grep again?<br
+/>Victor will be talking more on "grep" specifically.<br
+/>grep will search in a string<br
+/>that string can be a file, just a string,...<br
+/>If it finds what it's looking for, it will print it<br
+/>Thanks<br
+/><br
+/>can someone illustrate a line that would be found by e. but not e* or vice versa?<br
+/>e* will find any character -- let's try a newline character<br
+/>cproctor@staff:test&gt;cat test<br
+/>some text<br
+/>e<br
+/>Then<br
+/>cproctor@staff:test&gt;grep e test&nbsp;<br
+/>some text<br
+/>e<br
+/>cproctor@staff:test&gt;grep e. test&nbsp;<br
+/>some text<br
+/>cproctor@staff:test&gt;grep e* test&nbsp;<br
+/>some text<br
+/>e<br
+/>So, the last line the has just an "e" and no newline character "\n" -- hidden, is different.<br
+/>I see. Thank you.<br
+/><br
+/>Re: Exercise 16<br
+/>Why is he using "ls | grep" on the last line?<br
+/>That's just an example on how to use grep to filter the output given by ls. What's happening there, is that the output of ls is given to grep, which will filter this output.<br
+/><br
+/><br
+/>Is there a difference between "ls | grep "ski*" and "ls ski*"?<br
+/>i'm just learning too, but I think grep ski* looks for names with any number of s's k's and i's.<br
+/>"ls ski*" outputs a list of files with name starting with "ski". "ls | grep "ski*"" filters the output of ls. Giving the lines containing "ski".Thanks<br
+/><br
+/>what was the web page he just mentioned for sed and awk ?<br
+/><a href="http://shop.oreilly.com/product/9781565922259.do">http://shop.oreilly.com/product/9781565922259.do</a><br
+/><br
+/>Let's say I screwd up "ls". How do I restore it?<br
+/>?&nbsp;<br
+/>type "which ls" and tell me what you get.<br
+/>Well, I have not modified it. I am just wondering<br
+/>"ls" is an executable that only the root user may change.<br
+/>If you were to "screw it up", then you'd have a hard time looking around in directories.<br
+/>Typically "ls" lives in "/bin/ls"<br
+/>If you really did mess it up or delete, you'd be in trouble<br
+/>Do I download it from somewhere? Just curious?<br
+/>You could. It comes by default with any Linux/Unix environment.<br
+/><br
+/><br
+/>So is ls a process or a file?<br
+/>an executable file.<br
+/>can you give an example of a process?<br
+/>type 'ps aux' and you'll get the list of processes currently running<br
+/>thank you<br
+/><br
+/><br
+/><br
+/>My work.cmd did not run.<br
+/>cat work.cmd&nbsp;<br
+/>#!/bin/bash<br
+/><br
+/>echo "It works"<br
+/>what's the error message?<br
+/>-bash: work.cmd: command not found<br
+/>That's because it is not "on the path" so to speak.<br
+/>You must show linux where it lives.<br
+/>Using a relative path, you can type:<br
+/>./work.cmd<br
+/>that is, if you are in the same directory<br
+/>Cool, it worked that way<br
+/><br
+/>How do I add something to the $PATH simply from the command line (without editing .bashrc)?<br
+/>export PATH=$PATH:whatever_you_are_adding<br
+/>interesting, this works well:<br
+/>"export PATH=$PATH:$PWD"<br
+/>Sure, you can always use environment variables<br
+/><br
+/><br
+/><br
+/>Sorry, should we type them in a shell?<br
+/>we did sth named work.cmd<br
+/>Not in this case.<br
+/>so we have to just write in terminal?!<br
+/>yes, in that particular example. Sorry for the confusion<br
+/>oh, ok thanks<br
+/><br
+/><br
+/>Do these variables stay forever in the memory?<br
+/>No. They only exist in the terminal session that you created them in.<br
+/>To make them persistent, you usually set them in a file that runs when you start a new terminal. Usually ~/.bashrc file.<br
+/><br
+/>Sorry, he went through Export fast... what does it do?<br
+/>Victor didn't have time to discuss "export" in depth.<br
+/>It is specifically a bash command that 'exports' a variable into the environment.<br
+/>If you write a variable inside a shell script and you want to reference it outside the<br
+/>script, then you would use the "export" command so that it is then saved in the environment<br
+/>instance of that particular terminal session.<br
+/>Thanks... why do you need&nbsp;<br
+/>exercise 2 illustrates that.<br
+/>Does that help?<br
+/><br
+/>hmmm... doesn't work<br
+/>my test file has one line: "export g=4"<br
+/>then i do:<br
+/>[]./test<br
+/>[]echo $g<br
+/>(blank)<br
+/>:-) You're right....I should test my example before I write them<br
+/>export makes the variable available to sub-processes.<br
+/>That is,<br
+/>export name=value<br
+/>means that the variable name is available to <i>any process</i> you run from that shell process. If you want a process to make use of this variable, use export, and run the process from that shell.<br
+/>name=value<br
+/>means the variable scope is restricted to the shell, and is not available to any other process. You would use this for (say) loop variables, temporary variables etc.<br
+/>It's important to note that exporting a variable doesn't make it available to parent processes. That is, specifying and exporting a variable in a spawned process doesn't make it available in the process that launched it.<br
+/>(yay stackexchange)<br
+/>I see... so if I put echo $g into the test program, it should work?<br
+/>Let's see.<br
+/>Yes.. returns "4"<br
+/>But it also works if I just have:<br
+/>g=4<br
+/>echo $g<br
+/>So it does not seem to require export, at least within the script<br
+/>Correct.<br
+/>But, if your script gave g as an input to a subprocess, then the export becomes important<br
+/>Got it, thanks!<br
+/>cproctor@staff:p&gt;cat test<br
+/>###########<br
+/>#!/bin/bash<br
+/><br
+/># Add or remove export here<br
+/>export g=4<br
+/><br
+/>echo -e "test $g"<br
+/><br
+/>./silly<br
+/>###########<br
+/>cproctor@staff:p&gt;cat silly<br
+/>###########<br
+/>#!/bin/bash<br
+/><br
+/>echo -e "silly $g"<br
+/>###########<br
+/>If you make "test" and "silly" files, chmod u+x to them to make them executable,<br
+/>and then play with export on the "g" variable, you will see that it is passed to the silly<br
+/>script when "export" is used and it is not passed when "export" is left off.<br
+/><br
+/><br
+/><br
+/><br
+/><br
+/><br
+/>do these files .bashrc and .profile have to start with #!/bin/bash&nbsp; ?<br
+/>no. good question though<br
+/><br
+/><br
+/><br
+/>Is there a way to log out and log in other than closing my terminal window?<br
+/>You aren't specifically logging in and out by closing the terminal window.<br
+/>Oh, so how do I log out? and the log in?<br
+/>When you open a new terminal session, it starts a new process for your user id.<br
+/>Logging in and out, to me, means logging in and out of either a remote computer<br
+/>or starting your local computer.&nbsp;<br
+/><br
+/><br
+/>this is a hidden file right?<br
+/>I just created it using touch .bashrc<br
+/>and how can I write? Using cat?<br
+/>cat &gt; .bashrc<br
+/><br
+/><br
+/><br
+/>yes. It was created by the system. It is a hidden file since it starts with "."&nbsp;<br
+/><br
+/>Do these files have to be called .bashrc and .profile ? I used different names because I knew those files existed elsewhere. (hasn't worked yet)<br
+/>From .profile you can call any other file, with the source command, so you could create a file named 'my_file' and then do 'source my_file' in the .profile file<br
+/>I made a .profile file that calls my_file, but it no longer calls the original .bashrc (I had some alias's set up there)<br
+/>what should I add to .profile?<br
+/>Add Source path/my_file in your .profile<br
+/>And, you should make sure you also have: source ~/.bashrc somewhere in your .profile<br
+/>Got it working!<br
+/><br
+/><br
+/><br
+/>can you please slow it down a little bit?<br
+/>the amount of material clearly exceeds 3 hours....<br
+/>maybe next time we'll do a whole day, or turn scripting into a separate section<br
+/>The best part is that it is recorded.<br
+/>It will be available online later so that everyone may review and go at their own pace.<br
+/><br
+/>Hmmm. How do I pull out the first argument of the three?<br
+/>$1 represents the first parameter<br
+/>3=$1<br
+/>echo $3&nbsp; &lt;--- This is very confusing to use. How could you get the third argument?<br
+/>I was wrong.<br
+/>Yes... would be better to use a letter variable, right?<br
+/>It is safer to stay away from BASH specific reserved syntax, yes.<br
+/>you would do<br
+/>y=$3<br
+/>echo $y<br
+/>This is clearer.<br
+/>nice... ok, i've got<br
+/>bash-3.2$ ./namum cat pig donkey<br
+/>There are 3 arguments<br
+/>The first argument is cat<br
+/>echo "first arg is $1" worked for me-- without need for defining other variables<br
+/>why do you need whitespace around the test?<br
+/>:-) BASH is a fickle language<br
+/>Spacing is very important<br
+/>As to why....I don't know :-)<br
+/>Haha... Guess we have to ask Linus<br
+/>How bout this, what's the difference between:<br
+/>if [ $# &gt; 0 ]; then<br
+/>and<br
+/>if [ $# -gt 0 ]; then<br
+/>?<br
+/>There could be a subtle difference...I'm checking now<br
+/>I can't come up with an example where they are different.<br
+/>Found one:<br
+/>if [ "a" \&gt; "b" ]; then<br
+/>&nbsp;&nbsp;&nbsp; echo "woo"<br
+/>fi<br
+/>You must add the backslash character within a [ ] construct in order to evaluate<br
+/>the comparison correctly. With the "-gt" you don't need a backslash.<br
+/>yes, i see... without the \ my namum outputs The first argument is if I in fact give no arguments.<br
+/>Right, it always evaluates as true without the backslash.<br
+/><br
+/><br
+/>Good session overall. Would cut some into history at the beginning for later shell scripting<br
+/>Would love to come back for another session just on shell scripting, great job guys!<br
+/>Thanks for the feedback. We'll consider a shell scripting course<br
+/><br
+/>Thank you so much!<br
+/><br
+/>Great webinar!<br
+/><br
+/>Thanks guys! It was very useful session especially on shell script<br
+/>Hope we can have a session just for script writing<br
+/>I missed to follow this part completely<br
+/>It went so fast!&nbsp;<br
+/>But overally great job!<br
+/>The best part is that it is recorded.<br
+/>It will be available online later so that everyone may review and go at their own pace.<br
+/>Thanks :)<br
+/><br
+/>What's the URL for the recording?<br
+/><a href="https://www.youtube.com/watch?v=cyINirlJZzk#t=10">https://www.youtube.com/watch?v=cyINirlJZzk#t=10</a><br
+/>Or if you would like the material with it:<br
+/><a href="https://www.tacc.utexas.edu/user-services/training/linux-unix-basics-for-hpc">https://www.tacc.utexas.edu/user-services/training/linux-unix-basics-for-hpc</a><br
+/><br
+/><br
+/></body>
+</html>

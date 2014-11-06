@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<title>/5776$10</title>
+</head>
+<body>TACC HPC Python&nbsp; October 30, 2014 9:00am - 12:00pm<br
+/><br
+/>&nbsp;<br
+/>Welcome!<br
+/>Please submit questions at the bottom of this page.<br
+/>loud and clear<br
+/><br
+/><br
+/>'cp:missing destination file operand after '/home1/..../python-hpc.tar.gz<br
+/>Can you tell what I'm doing wrong?<br
+/>Nevermind. No . after command<br
+/><br
+/><br
+/>Hello. Someone there?<br
+/>Hello.<br
+/>I'm not able to submit an interactive job to the TACC-HPC-PYTHON account:<br
+/>User dssussx is not associated with project TACC-HPC-PYTHON (in accounting_check_prod.pl).<br
+/>Online users may use a regular idev session.<br
+/>The TACC-HPC-PYTHON account is reserved for local users only.<br
+/><br
+/>What do we do after we log in?<br
+/>module load intel/14.0.1.106<br
+/>module load python/2.7.6<br
+/>and "cp ~train00/python-hpc.tar.gz ."&nbsp;<br
+/><br
+/>With idev command:<br
+/>Please report this problem:<br
+/>what problem?<br
+/>U. of TX users contact (<a href="https://portal.tacc.utexas.edu/consulting)">https://portal.tacc.utexas.edu/consulting)</a><br
+/>XSEDE&nbsp;&nbsp;&nbsp; users contact (<a href="https://portal.xsede.org/group/xup/help-desk)">https://portal.xsede.org/group/xup/help-desk)</a>.<br
+/>FAILED<br
+/>What command are you attempting? Just "idev"?<br
+/><br
+/><br
+/><br
+/>What do we do after "cp ~train00/python-hpc.tar.gz"?<br
+/>tar -xzf python-hpc.tar.gz<br
+/>I got this error:<br
+/>login4.stampede(7)$ tar -fxz python-hpc.tar.gz<br
+/>try "tar -xzf python-hpc.tar.gz"&nbsp;<br
+/>(I'm quite surprised that the sequence of options makes a difference)<br
+/>tar: You must specify one of the `-Acdtrux' or `--test-label'&nbsp; options<br
+/>Try `tar --help' or `tar --usage' for more information.<br
+/>login4.stampede(8)$&nbsp;<br
+/>Are we just trying to untar this file?<br
+/>Yes.<br
+/>Okay. I will look online for how to do this.<br
+/><br
+/>I used srun instead of idev to get a compute node. Is that okay?<br
+/>That should be okay.<br
+/><br
+/>Can the speaker move his terminal window down? I want to see the top of the current slide. I believe it shows us how to run the job. Is this correct? Are we running profiling.py?<br
+/>python -m cProfile profiling.py<br
+/><br
+/>The slides should be available online:<br
+/><a href="https://www.tacc.utexas.edu/user-services/training/hpc-python">https://www.tacc.utexas.edu/user-services/training/hpc-python</a><br
+/>I found them!!<br
+/><br
+/><br
+/>I get a ERROR: Cell magic `%%cython` not found.<br
+/>How did you start your ipython session?<br
+/>did you do the "%load_ext"?<br
+/>(and on what machine are you?)<br
+/>let me try again<br
+/>yeah load_ext solved ti<br
+/><br
+/>Not sure what to do here:<br
+/>login4.stampede(38)$ icc -shared -fPIC -03 myfunc -o myfun1.so -I$TACC_PYTHON_INC/python2.7/<br
+/>icc: command line warning #10006: ignoring unknown option '-03'<br
+/>That's a letter Oh, not digit zero<br
+/>icc: error #10236: File not found:&nbsp; 'myfunc'<br
+/>you forgot the ".c" extension<br
+/>icc: command line error: no files specified; for help type "icc -help"<br
+/>login4.stampede(39)$&nbsp;<br
+/>Same error. Where did myfunc1.c come from?<br
+/>from the command "cython myfunc1.pyx" (thankyou) (I missed that)<br
+/>I retried it b/c I had a typo. Here's what I got:<br
+/>login4.stampede(40)$ icc -shared -fPIC -03 myfunc1.c -o myfun1.so -I$TACC_PYTHON_INC/python2.7/<br
+/>icc: command line warning #10006: ignoring unknown option '-03'<br
+/>letter Oh, not digit zero: -03 vs -O3<br
+/><br
+/><br
+/>whats inside $TACC_PYTHON_INC/python2.7/<br
+/>just "ls" it.<br
+/>my times are greater than what you get<br
+/>on stampede? do you at least get an improvement in the same way as the teacher?<br
+/>By how much?<br
+/>almost twice&nbsp;<br
+/>let me check on the improvement<br
+/>I should compare test_python vs test_cython right?<br
+/><br
+/><br
+/>Thanks for the link to the tutorial!<br
+/><br
+/>Okay I can do the cython myfunc3.pyx and the icc line without error. I generate an executable "myfunc3", but when I do "python test_cython3.py" I get an error:<br
+/>"Import error: no module named myfunc3"<br
+/>Any idea?<br
+/>I guess the .so files are not being generated<br
+/>I might have missed the part where he said how to do that<br
+/>Are you compiling the way that Antonio shows on the slides?<br
+/>I do the line starting with cython then the line starting with icc verbatim. Then python test_whatever<br
+/>Hmm. So the .so is being generated, but then the function call in test_cython3.py cannot find it?<br
+/>are you getting any errors? do a cut/paste of your terminal session.<br
+/>here's how it works for me:<br
+/>1. run cython:<br
+/>cython myfunc3.pyx&nbsp;<br
+/>login4.stampede(29)$ ls<br
+/>myfunc1.pyx&nbsp; myfunc2.pyx&nbsp; myfunc3.c&nbsp; myfunc3.pyx<br
+/>2. compile:<br
+/>icc -fPIC -shared myfunc3.c -o myfunc3.so -I$TACC_PYTHON_INC/python2.7<br
+/>login4.stampede(33)$ python test_cython3.py&nbsp;<br
+/>7.4535600368e+13<br
+/><br
+/><br
+/><br
+/>So if I want to do this using my own python installation what would I give for TACC_PYTHON_INC/python2.7/<br
+/>hm. do "find / -name cellobject.h"<br
+/>that's the directory you need.<br
+/>This is the include directory for your particular version of Python.<br
+/>thanks<br
+/><br
+/><br
+/>What is mean by broadcasting again?<br
+/>This is referring to sending/receiving variables within an MPI enabled code.<br
+/>Different MPI tasks each have unique values for variables within an MPI code.<br
+/>Broadcast is a way to send to each task a value(s) to other tasks.<br
+/>More about this later in Antonio's presentation.<br
+/>Thanks.<br
+/><br
+/>What is meant by MIC? Using the MIC?<br
+/>Many Integrated Cores<br
+/>That's another name fr the Intel Xeon Phi co-processor&nbsp;<br
+/>on the stampede nodes<br
+/>Thanks for explaining that.<br
+/><br
+/>Since we can't use the MIC on the Login node, how do we get off the login node, or can we?<br
+/>start an idev session: that puts you on a compute node, and they all have a MIC<br
+/>(idev usually starts in the development queue; you can also use the normal-mic queue)<br
+/>Okay then. Thanks!<br
+/><br
+/>How do you decide on 240 as a number for MIC_OMP_NUM_THREADS<br
+/>60 cores times 4 threads<br
+/>But a node has only 16 cores ?<br
+/>The node has 2 sandybridges of 8 cores, correct.<br
+/>The MIC is a separate co-processor; it has 60 cores<br
+/>note the variable name MIC_OMP_NUM_THREADS, as opposed to OMP_NUM_THREADS<br
+/><br
+/><br
+/>My time did not improve on that last example. I don't know why?<br
+/>what is the output of "hostname -a"?<br
+/>login4.stampede(77)$ hostname -a<br
+/>login4<br
+/>You need to be on a compute node in order to use a MIC.<br
+/>Please refrain from running this code on the login node -- it will affect performance for other users.<br
+/>same here no improvement hostname c559-101<br
+/>Try turning on the offload report environment variable to see if you are actually offloading.<br
+/>export OFFLOAD_REPORT=2<br
+/>If you are offloading while running your code, you will receive extra output telling you.<br
+/>Do you see this when you run?<br
+/>No I donot see extra output<br
+/>Can you double check your environment variables and their values?<br
+/>sure<br
+/>export MKL_MIC_ENABLE=1<br
+/>export OMP_NUM_THREADS=16<br
+/>export MIC_OMP_NUM_THREADS=240<br
+/>export OFFLOAD_REPORT=2<br
+/>echo $OMP_NUM_THREADS $MKL_MIC_ENABLE $MIC_OMP_NUM_THREADS $OFFLOAD_REPORT&nbsp;<br
+/>16 1 240 2<br
+/>Yeah they are all there<br
+/>Would please output which modules you are using with "module list"?<br
+/>Currently Loaded Modules:<br
+/>&nbsp; 1) TACC-paths&nbsp;&nbsp; 3) cluster-paths&nbsp;&nbsp; 5) cluster&nbsp;&nbsp; 7) intel/13.0.2.146&nbsp;&nbsp; 9) fftw3/3.3.2<br
+/>&nbsp; 2) Linux&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4) xalt/0.4.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6) TACC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8) mvapich2/1.9a2<br
+/><br
+/>Inactive Modules:<br
+/>&nbsp; 1) python/2.7.6<br
+/>Ahhh<br
+/>:-) You need to load intel/14 to get the MIC enabled python/2.7.6.<br
+/>Let me know if that works out.<br
+/>Yeah worked out<br
+/>Great!<br
+/><br
+/><br
+/><br
+/>I did not get output here.<br
+/>login4.stampede(75)$ python basic_1.py&nbsp;<br
+/>[....]<br
+/>_tkinter.TclError: no display name and no $DISPLAY environment variable<br
+/>login4.stampede(76)$&nbsp;<br
+/>when you connected to stampede, did you use ssh -X ? And do you have a X11 manager on your local computer?<br
+/>I did not use ssh -X. I used ssh username@login.xsede.org I don't know if I have an X11 manager. I'm using a laptop with Ubuntu. If you have Ubuntu using ssx -X .... should fix the problem.<br
+/>ssh -X user@host or ssh -Y user@host for Stampede should be sufficient for X11 tunneling and opening up X-windows.<br
+/><br
+/><br
+/>What does hostname -a output if I am on a compute node?<br
+/>How do I make sure I am using a compute node?<br
+/>What are you getting (it varies for all of them)?<br
+/>If you see login.... then it's a login, if you see c###-### it's a compute node.<br
+/>Got it.<br
+/><br
+/>Could you tell me how to compute $MIC_OMP_NUM_THREADS&nbsp; for a node with 16 cores<br
+/>Do you mean show the value of the environment variable $MIC_OMP_NUM_THREADS?<br
+/>echo $MIC_OMP_NUM_THREADS<br
+/>NO how did you come up with 240 number&nbsp;<br
+/>Or is it default per node<br
+/>If I am specifying it in a job script how will I doit<br
+/><br
+/>The node has 2 sandybridges of 8 cores, correct.<br
+/>The MIC is a separate co-processor; it has 60 cores<br
+/>note the variable name MIC_OMP_NUM_THREADS, as opposed to OMP_NUM_THREADS<br
+/>It's part of the hardware of the Intel Xeon Phi Coprocessor (i.e. MIC).<br
+/>Oh ok so does all nodes on stamped have MICs with 60 cores<br
+/>Essentially all compute nodes. Not the login nodes. All our MICs are "the same" in the sense they have 60 cores.<br
+/>Why multiply by 4 so&nbsp;<br
+/>Because the MIC has 4 hardware threads<br
+/>Thanks I will look this up<br
+/><a href="https://software.intel.com/en-us/articles/optimization-and-performance-tuning-for-intel-xeon-phi-coprocessors-part-2-understanding">https://software.intel.com/en-us/articles/optimization-and-performance-tuning-for-intel-xeon-phi-coprocessors-part-2-understanding</a><br
+/><br
+/>So is this available for any code that is compiled using MKL<br
+/>With the intel compilers, yes.<br
+/>Offload will be supported via OpenMP 4.0 in upcoming GCC compiler implementations as well.<br
+/>Currently I have code compiled with Intel compilers an MKL in stampede. So If I specify MIC variables it will automatically offload to MIC right?<br
+/>It depends on which MKL calls you are using, how big your matrices are.<br
+/>Mainly tha LAPACK routines are used with pretty large matrices<br
+/>Many routines are supported. I'm not sure which specific ones are but many of the 'popular' ones, as Antonio pointed out in the tutorial.<br
+/><br
+/>How do I get on a compute node? I want to run these examples.<br
+/>I was on a compute node at one point but not anymore.<br
+/><br
+/>idev -t 2:00:00<br
+/>The account for TACC-HPC-PYTHON is reserved for local participants.<br
+/><br
+/>Thank you for that great presentation. The last part on mpi4py was difficutl for me to follow. However, overall, I learned a lot.<br
+/><br
+/></body>
+</html>
