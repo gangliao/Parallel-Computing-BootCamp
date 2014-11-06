@@ -57,4 +57,4 @@ From UC berkeley, UIUC, CMU, MIT, Argonne, etc.
 
  
 ###TACC###
--[X] ~~~TACC HPC Monthly Workshop: MPI~~~
+- [X] ~~TACC HPC Monthly Workshop: MPI~~
