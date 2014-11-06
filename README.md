@@ -56,3 +56,5 @@ From UC berkeley, UIUC, CMU, MIT, Argonne, etc.
 - [ ] COSC 594: Scientific Computing for Engineers [homepage](http://web.eecs.utk.edu/~dongarra/WEB-PAGES/SPRING-2014/cs594-2014.htm)
 
  
+###TACC###
+-[X] ~~~TACC HPC Monthly Workshop: MPI~~~
