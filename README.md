@@ -1,4 +1,4 @@
-Parallel-Computing-BootCamp
+Parallel Computing BootCamp
 ===========================
 
 From UC berkeley, UIUC, CMU, MIT, Argonne, etc.
