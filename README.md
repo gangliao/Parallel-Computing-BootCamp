@@ -43,6 +43,8 @@ From UC berkeley, UIUC, CMU, MIT, Argonne, etc.
 
 ###CMU###
 - [ ] CMU 15-418: Parallel Computer Architecture and Programming, 2014 Spring [homepage](http://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=“6f8dfe4c-565f-4642-ae71-1a9f587311c6")
+- [ ] CMU 15-499: Parallel Algorithms [homepage](http://www.cs.cmu.edu/afs/cs/academic/class/15499-s09/www/)
+- [ ] CMU 15-210: Parallel and Sequential Data Structures and Algorithms  [homepage](http://www.cs.cmu.edu/~15210/schedule.html)
 
 ###Washington###
 - [ ] CSE/ESE 569M: Parallel Architectures and Algorithms [homepage](http://research.engineering.wustl.edu/~songtian/)
